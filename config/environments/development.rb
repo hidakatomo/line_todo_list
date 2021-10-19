@@ -1,6 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_controller.default_protect_from_forgery = false
+
+  config.web_console.whitelisted_ips = '147.92.149.167'
+  # ngrok を立ち上げた際に発行される URL のドメイン部分（https:// 以降)を以下のように記載する
+  config.hosts = ["4df3-192-218-160-93.ngrok.io", "localhost"]
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

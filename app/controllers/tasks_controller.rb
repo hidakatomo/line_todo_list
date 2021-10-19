@@ -1,6 +1,9 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[ show update destroy ]
 
+  protect_from_forgery
+  # protect_from_forgery with: :null_session
+
   # GET /tasks
   # GET /tasks.json
   def index
